@@ -1,0 +1,7 @@
+<div *ngFor="let keyValuePair of carrito | keyvalue"> 
+    <p >{{ keyValuePair.value.producto.nombre }} <span > x{{ keyValuePair.value.cantidad }}</span></p>
+  </div>
+  
+  <p>Total: {{ total }}</p>
+  <button (click)="formalizarCompra()" style="background-color: #606060;width: 175px;margin-left: 50px;" class="btn btn-primary btn-block">Finalizar compra</button>
+  

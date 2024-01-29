@@ -1,0 +1,13 @@
+<div *ngIf="productos">
+    <main class="funko-display">
+        <h2>Colección Funko Pop</h2>
+        <div class="row">
+            <div class="funko-item" *ngFor="let producto of productos">
+                <img [src]="'assets/' + producto.nombre + '.jpg'" [alt]="producto.nombre">
+                <p>{{producto.nombre}} {{producto.precio}}€</p>
+                <button (click)="enviarCarrito(producto)" style="background-color: #909090;height: 30px; display: inline;">Comprar</button>
+            </div>
+        </div>
+    </main>
+</div>
+<ng-template #loading>Loading...</ng-template>

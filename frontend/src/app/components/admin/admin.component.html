@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <div *ngIf="productos">
+    <main class="funko-display">
+        <h2>Colección Funko Pop</h2>
+        <div class="row">
+            <div class="funko-item" *ngFor="let producto of productos">
+                <img [src]="'assets/' + producto.nombre + '.jpg'" [alt]="producto.nombre">
+                <p>{{producto.nombre}} {{producto.precio}}€</p>
+                <button (click)="eliminarProducto(producto._id)" style="background-color: #909090;height: 30px; display: inline;">Eliminar</button>
+            </div>
+        </div>
+    </main>
+  </div>
+
+
+  <!-- Formulario para crear o añadir productos -->
+  <form #productoForm="ngForm"  class="mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">Añadir Producto</h2>
+
+        <div class="mb-3">
+          <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
+          <input type="text" id="nombreProducto" class="form-control" #nombreProducto="ngModel" name="nombreProducto" [(ngModel)]="nuevoProducto.nombre" required>
+        </div>
+
+        <div class="mb-3" *ngIf="expression">
+          <label for="nombreProducto" class="form-label">Nombre del Producto NUEVO:</label>
+          <input type="text" id="nombreProducto2" class="form-control" #nombreProducto2="ngModel" name="nombreProducto2" [(ngModel)]="NUEVONOMBRE" required>
+        </div>
+
+    <p>Deseas editar? <input type="checkbox" (click)="mostrarocultar()">  </p>    
+        <div class="mb-3">
+          <label for="stock" class="form-label">Stock:</label>
+          <input type="number" id="stock" class="form-control" #stock="ngModel" name="stock" [(ngModel)]="nuevoProducto.stock" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio:</label>
+          <input type="number" id="precio" class="form-control" #precio="ngModel" name="precio" [(ngModel)]="nuevoProducto.precio" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="categoria" class="form-label">Categoría:</label>
+          <input type="text" id="categoria" class="form-control" #categoria="ngModel" name="categoria" [(ngModel)]="nuevoProducto.categoria" required>
+        </div>
+        <button  (click)="editarProducto()" class="btn btn-primary btn-block" style="background-color: #606060;">Editar Producto</button>
+        <button  (click)=" agregarProducto()" cltype="submit" class="btn btn-primary btn-block" style="background-color: #606060;">Añadir Producto</button>
+      </div>
+    </div>
+  </form>
+
+</body>
+
+</html>

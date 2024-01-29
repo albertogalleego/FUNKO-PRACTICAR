@@ -1,0 +1,26 @@
+ /* Puedes personalizar el color y otros estilos según tus preferencias */
+ h1{
+  color: white;
+ }
+ body {
+    background-color: #f8f9fa;
+  }
+  nav {
+    padding-left: 30px; /* Ajusta el valor según sea necesario */
+  }
+  .navbar {
+    background-color: #606060;
+    position: sticky; /* Fijar la barra de navegación en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar-brand {
+    margin-left: 15px; /* Margen izquierdo para el título */
+    color: #ffffff; /* Color del texto del título */
+    font-size: 1.5rem; /* Tamaño de fuente del título */
+    font-weight: bold; /* Peso de la fuente del título */
+  }
+
+

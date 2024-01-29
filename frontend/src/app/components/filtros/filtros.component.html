@@ -1,0 +1,36 @@
+   <!-- Categorías (Lado izquierdo) -->
+   <div class="col-lg-3 col-md-4 col-sm-12">
+    <div class="p-3">
+        <h3>Categorías</h3>
+        <p  (click)="enviarFiltros('',0)" class="list-group-item" style="background-color: #f8f9fa; color: #6c757d; text-decoration: none; width: 300px;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#6c757d';" onmouseout="this.style.backgroundColor=''; this.style.color='';">Mostrar todo</p>
+
+        <ul class="list-group" *ngFor="let categoria of categoriasService.categorias">
+            <p  (click)="enviarFiltros(categoria.nombre,0)" class="list-group-item" style="background-color: #f8f9fa; color: #6c757d; text-decoration: none; width: 300px;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#6c757d';" onmouseout="this.style.backgroundColor=''; this.style.color='';">{{categoria.nombre}}</p>
+        </ul>
+    </div>
+    
+    <!-- Caja de Precios -->
+    <div class="caja-filtro" style="width: 300px;">
+        <h3>Precio</h3>
+        <form id="formulario-rango-precios">
+            <label>
+                <input type="radio" name="precio" value="sin-filtro" (click)="enviarFiltros('',0)">
+                Sin filtro
+            </label><br>
+            <label>
+                <input type="radio" name="precio" value="menos-15" (click)="enviarFiltros('',1)">
+                Menos de 15€
+            </label><br>
+            
+            <label>
+                <input type="radio" name="precio" value="15-30" (click)="enviarFiltros('',2)">
+                Entre 15€ y 30€
+            </label><br>
+            
+            <label>
+                <input type="radio" name="precio" value="mas-30" (click)="enviarFiltros('',3)">
+                Más de 30€
+            </label><br>
+        </form>
+    </div>
+</div>

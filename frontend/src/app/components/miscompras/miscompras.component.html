@@ -1,0 +1,15 @@
+<ul><h2>Historial de compras personal</h2></ul>
+<ul class="list-group" *ngFor="let compra of miscompras"> <!--este for hace el array de mis compras y lo va pintando por pantalla-->
+   
+  <hr>
+    <div style="margin-left: 250px;"> <!-- Div para tabular -->
+      <p class="list-group-item" style="background-color: #f8f9fa; color: #6c757d; text-decoration: none; width: 1000px;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#6c757d';" onmouseout="this.style.backgroundColor=''; this.style.color='';">
+        Total comprado: {{compra.totalcompra}}€ <!--compra llama a la cantidad de euros que ha pagado-->
+        <br> <!-- Salto de línea para separar -->
+        Productos comprados: {{compra.productoscomprados}} <!--Cantidad de productos comprados por el usuario en una compra-->
+      </p>
+    </div>
+    <hr>
+  </ul>
+ <ul> <p>Total comprado por el usuario: {{totalCompras}}</p></ul>
+  

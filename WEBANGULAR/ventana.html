@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección Funko Pop</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Barra de menú -->
+    <div class="menu">
+        <a href="#home">
+            <img src="inicio.jpg" alt="Logo Funko" style="height: 25px;"> <!-- Cambia 'logo-funko.png' a la ruta de tu imagen y ajusta la altura como desees -->
+        </a>
+        
+        <a href="#cart" class="cart"><i class="fas fa-shopping-cart"></i></a>
+
+    </div>
+
+   <!-- Filtros en el margen izquierdo -->
+<aside class="filtros">
+    <h2>Filtros</h2>
+
+    <!-- Caja de Categorías -->
+    <div class="caja-filtro">
+        <h3>Categorías</h3>
+        <form id="formulario-categorias">
+            <label>
+                <input type="radio" name="categoria" value="dragon-ball" onclick="filtrarCategoria()">
+                Dragon Ball
+            </label><br>
+            
+            <label>
+                <input type="radio" name="categoria" value="naruto" onclick="filtrarCategoria()">
+                Naruto
+            </label><br>
+            
+            <label>
+                <input type="radio" name="categoria" value="one-piece" onclick="filtrarCategoria()">
+                One Piece
+            </label><br>
+        </form>
+    </div>
+
+    <!-- Caja de Precios -->
+    <div class="caja-filtro">
+        <h3>Precio</h3>
+        <form id="formulario-rango-precios">
+            <label>
+                <input type="radio" name="precio" value="menos-15" onclick="filtrarPrecio()">
+                Menos de 15€
+            </label><br>
+            
+            <label>
+                <input type="radio" name="precio" value="15-30" onclick="filtrarPrecio()">
+                Entre 15€ y 30€
+            </label><br>
+            
+            <label>
+                <input type="radio" name="precio" value="mas-30" onclick="filtrarPrecio()">
+                Más de 30€
+            </label><br>
+        </form>
+    </div>
+</aside>
+
+
+    <!-- Panel central con imágenes de Funkos -->
+    <main class="funko-display">
+        <h2>Colección Funko Pop</h2>
+        <div class="funko-grid">
+            <!-- Bloques para cada Funko Pop -->
+            <div class="funko-item">
+                <img src="funko1.jpg" alt="Funko Pop 1">
+                <p>Descripción del Funko Pop 1</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko2.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 2</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko3.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 3</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko4.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 4</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko5.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 5</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko6.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 6</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko7.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 7</p>
+            </div>
+            <div class="funko-item">
+                <img src="funko8.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 8</p>
+            </div>
+
+            <div class="funko-item">
+                <img src="funko9.jpg" alt="Funko Pop 9">
+                <p>Descripción del Funko Pop 9</p>
+            </div>
+        </div>
+    </main>
+    
+    
+
+   
+    <aside class="ranking">
+        <h2>Top Ventas</h2>
+        <ol>
+            <li>Funko Pop 1</li>
+            <li>Funko Pop 2</li>
+            <li>Funko Pop 3</li>
+           
+        </ol>
+    </aside>
+</div>
+<footer class="footer">
+    <p>Si te gustó la página web, puedes seguirnos a través de nuestras redes sociales:</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/tupagina" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/tupagina" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/tupagina" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- Añade más redes sociales de la misma forma -->
+    </div>
+</footer>
+</body>
+</html>
